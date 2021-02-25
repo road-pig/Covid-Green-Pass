@@ -1,4 +1,4 @@
-package com.example.covidgreenpass.ui.notifications;
+package com.example.covidgreenpass.ui.profile;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
