@@ -7,16 +7,165 @@
     tools:context=".ui.profile.NotificationsFragment">
 
     <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Hatsune Miku"
+        android:textAppearance="@style/GreyBody"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="@+id/profileID"
+        app:layout_constraintTop_toTopOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="You Are Safe"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/status2TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="No contact with infected persons recorded"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/dark_turquoise"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Name:"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/dark_turquoise"
+        app:layout_constraintBottom_toTopOf="@+id/idno"
+        app:layout_constraintStart_toStartOf="@+id/idno"
+        app:layout_constraintTop_toBottomOf="@+id/status2TextView"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/idno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identification Number:"
+        android:textAppearance="@style/SmallText"
+        app:layout_constraintBottom_toTopOf="@+id/vaccinereceived"
+        app:layout_constraintStart_toStartOf="@+id/vaccinereceived"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/profileID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03901"
+        android:textAppearance="@style/GreyBody"
+        app:layout_constraintBottom_toBottomOf="@+id/idno"
+        app:layout_constraintEnd_toEndOf="@+id/profileVaccineName"
+        app:layout_constraintTop_toTopOf="@+id/idno" />
+
+    <TextView
+        android:id="@+id/vaccinereceived"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vaccine Received:"
+        android:textAppearance="@style/SmallText"
+        app:layout_constraintBottom_toTopOf="@+id/vaccinationdate"
+        app:layout_constraintStart_toStartOf="@+id/vaccinationdate"
+        app:layout_constraintTop_toBottomOf="@+id/idno" />
+
+    <TextView
+        android:id="@+id/profileVaccineName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pfizer-Biontech"
+        android:textAppearance="@style/GreyBody"
+        app:layout_constraintBottom_toBottomOf="@+id/vaccinereceived"
+        app:layout_constraintEnd_toEndOf="@+id/profileVaccinationDate"
+        app:layout_constraintTop_toTopOf="@+id/vaccinereceived" />
+
+    <TextView
+        android:id="@+id/vaccinationdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of Vaccination"
+        android:textAppearance="@style/SmallText"
+        app:layout_constraintBottom_toTopOf="@+id/testresult"
+        app:layout_constraintStart_toStartOf="@+id/testresult"
+        app:layout_constraintTop_toBottomOf="@+id/vaccinereceived" />
+
+    <TextView
+        android:id="@+id/profileVaccinationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="19/03/2021"
+        android:textAppearance="@style/GreyBody"
+        app:layout_constraintBottom_toBottomOf="@+id/vaccinationdate"
+        app:layout_constraintEnd_toEndOf="@+id/profileTestResult"
+        app:layout_constraintTop_toTopOf="@+id/vaccinationdate" />
+
+    <TextView
+        android:id="@+id/testresult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latest COVID-19 Test Result:"
+        android:textAppearance="@style/SmallText"
+        app:layout_constraintBottom_toTopOf="@+id/latesttestdate"
+        app:layout_constraintStart_toStartOf="@+id/latesttestdate"
+        app:layout_constraintTop_toBottomOf="@+id/vaccinationdate" />
+
+    <TextView
+        android:id="@+id/profileTestResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Negative"
+        android:textAppearance="@style/GreyBody"
+        app:layout_constraintBottom_toBottomOf="@+id/testresult"
+        app:layout_constraintEnd_toEndOf="@+id/profileTestDate"
+        app:layout_constraintTop_toTopOf="@+id/testresult" />
+
+    <TextView
+        android:id="@+id/latesttestdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="64dp"
+        android:text="Latest Test date"
+        android:textAppearance="@style/SmallText"
+        app:layout_constraintBottom_toTopOf="@+id/profileUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testresult" />
+
+    <TextView
+        android:id="@+id/profileTestDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="21/03/2021"
+        android:textAppearance="@style/GreyBody"
+        app:layout_constraintBottom_toBottomOf="@+id/latesttestdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/latesttestdate" />
+
+    <Button
+        android:id="@+id/profileUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
