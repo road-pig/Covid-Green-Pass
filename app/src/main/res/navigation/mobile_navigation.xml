@@ -2,17 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation">
-
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/QRCodeFragment">
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.covidgreenpass.ui.QRCode.QRCodeFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_qrcode" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/notificationsFragment"
         android:name="com.example.covidgreenpass.ui.profile.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/QRCodeFragment"
+        android:name="com.example.covidgreenpass.ui.QRCode.QRCodeFragment"
+        android:label="fragment_qrcode"
+        tools:layout="@layout/fragment_qrcode" />
 </navigation>
