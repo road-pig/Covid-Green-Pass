@@ -8,13 +8,17 @@
 
     <TextView
         android:id="@+id/profileName"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:gravity="right"
         android:text="Hatsune Miku"
+        android:textAlignment="gravity"
         android:textAppearance="@style/GreyBody"
-        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintBottom_toTopOf="@+id/profileID"
         app:layout_constraintEnd_toEndOf="@+id/profileID"
-        app:layout_constraintTop_toTopOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/status2TextView"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
     <TextView
         android:id="@+id/statusTextView"
@@ -45,14 +49,13 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginStart="32dp"
         android:text="Name:"
         android:textAppearance="@style/SmallText"
         android:textColor="@color/dark_turquoise"
-        app:layout_constraintBottom_toTopOf="@+id/idno"
-        app:layout_constraintStart_toStartOf="@+id/idno"
-        app:layout_constraintTop_toBottomOf="@+id/status2TextView"
-        app:layout_constraintVertical_chainStyle="spread_inside" />
+        app:layout_constraintBottom_toBottomOf="@+id/profileName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profileName" />
 
     <TextView
         android:id="@+id/idno"
@@ -60,19 +63,21 @@
         android:layout_height="wrap_content"
         android:text="Identification Number:"
         android:textAppearance="@style/SmallText"
-        app:layout_constraintBottom_toTopOf="@+id/vaccinereceived"
-        app:layout_constraintStart_toStartOf="@+id/vaccinereceived"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintBottom_toBottomOf="@+id/profileID"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/profileID" />
 
     <TextView
         android:id="@+id/profileID"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="03901"
+        android:gravity="right"
+        android:text="39393939"
+        android:textAlignment="gravity"
         android:textAppearance="@style/GreyBody"
-        app:layout_constraintBottom_toBottomOf="@+id/idno"
-        app:layout_constraintEnd_toEndOf="@+id/profileVaccineName"
-        app:layout_constraintTop_toTopOf="@+id/idno" />
+        app:layout_constraintBottom_toTopOf="@+id/profileContactNumber"
+        app:layout_constraintEnd_toEndOf="@+id/profileContactNumber"
+        app:layout_constraintTop_toBottomOf="@+id/profileName" />
 
     <TextView
         android:id="@+id/vaccinereceived"
@@ -80,82 +85,89 @@
         android:layout_height="wrap_content"
         android:text="Vaccine Received:"
         android:textAppearance="@style/SmallText"
-        app:layout_constraintBottom_toTopOf="@+id/vaccinationdate"
-        app:layout_constraintStart_toStartOf="@+id/vaccinationdate"
-        app:layout_constraintTop_toBottomOf="@+id/idno" />
+        app:layout_constraintBottom_toBottomOf="@+id/profileVaccineName"
+        app:layout_constraintStart_toStartOf="@+id/address"
+        app:layout_constraintTop_toTopOf="@+id/profileVaccineName" />
 
     <TextView
         android:id="@+id/profileVaccineName"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:gravity="right"
         android:text="Pfizer-Biontech"
+        android:textAlignment="gravity"
         android:textAppearance="@style/GreyBody"
-        app:layout_constraintBottom_toBottomOf="@+id/vaccinereceived"
+        app:layout_constraintBottom_toTopOf="@+id/profileVaccinationDate"
         app:layout_constraintEnd_toEndOf="@+id/profileVaccinationDate"
-        app:layout_constraintTop_toTopOf="@+id/vaccinereceived" />
+        app:layout_constraintTop_toBottomOf="@+id/addressTextView" />
 
     <TextView
         android:id="@+id/vaccinationdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date of Vaccination"
+        android:text="Date of Vaccination:"
         android:textAppearance="@style/SmallText"
-        app:layout_constraintBottom_toTopOf="@+id/testresult"
-        app:layout_constraintStart_toStartOf="@+id/testresult"
-        app:layout_constraintTop_toBottomOf="@+id/vaccinereceived" />
+        app:layout_constraintBottom_toBottomOf="@+id/profileVaccinationDate"
+        app:layout_constraintStart_toStartOf="@+id/vaccinereceived"
+        app:layout_constraintTop_toTopOf="@+id/profileVaccinationDate" />
 
     <TextView
         android:id="@+id/profileVaccinationDate"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:gravity="right"
         android:text="19/03/2021"
+        android:textAlignment="gravity"
         android:textAppearance="@style/GreyBody"
-        app:layout_constraintBottom_toBottomOf="@+id/vaccinationdate"
+        app:layout_constraintBottom_toTopOf="@+id/profileTestResult"
         app:layout_constraintEnd_toEndOf="@+id/profileTestResult"
-        app:layout_constraintTop_toTopOf="@+id/vaccinationdate" />
+        app:layout_constraintTop_toBottomOf="@+id/profileVaccineName" />
 
     <TextView
         android:id="@+id/testresult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Latest COVID-19 Test Result:"
+        android:text="Latest Test Result:"
         android:textAppearance="@style/SmallText"
-        app:layout_constraintBottom_toTopOf="@+id/latesttestdate"
-        app:layout_constraintStart_toStartOf="@+id/latesttestdate"
-        app:layout_constraintTop_toBottomOf="@+id/vaccinationdate" />
+        app:layout_constraintBottom_toBottomOf="@+id/profileTestResult"
+        app:layout_constraintStart_toStartOf="@+id/vaccinationdate"
+        app:layout_constraintTop_toTopOf="@+id/profileTestResult" />
 
     <TextView
         android:id="@+id/profileTestResult"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:gravity="right"
         android:text="Negative"
+        android:textAlignment="gravity"
         android:textAppearance="@style/GreyBody"
-        app:layout_constraintBottom_toBottomOf="@+id/testresult"
+        app:layout_constraintBottom_toTopOf="@+id/profileTestDate"
         app:layout_constraintEnd_toEndOf="@+id/profileTestDate"
-        app:layout_constraintTop_toTopOf="@+id/testresult" />
+        app:layout_constraintTop_toBottomOf="@+id/profileVaccinationDate" />
 
     <TextView
         android:id="@+id/latesttestdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="64dp"
-        android:text="Latest Test date"
+        android:text="Latest Test Date:"
         android:textAppearance="@style/SmallText"
-        app:layout_constraintBottom_toTopOf="@+id/profileUpdate"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/testresult" />
+        app:layout_constraintBottom_toBottomOf="@+id/profileTestDate"
+        app:layout_constraintStart_toStartOf="@+id/testresult"
+        app:layout_constraintTop_toTopOf="@+id/profileTestDate" />
 
     <TextView
         android:id="@+id/profileTestDate"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="right"
         android:text="21/03/2021"
+        android:textAlignment="gravity"
         android:textAppearance="@style/GreyBody"
-        app:layout_constraintBottom_toBottomOf="@+id/latesttestdate"
+        app:layout_constraintBottom_toTopOf="@+id/profileUpdate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/latesttestdate" />
+        app:layout_constraintTop_toBottomOf="@+id/profileTestResult" />
 
     <Button
         android:id="@+id/profileUpdate"
@@ -164,8 +176,54 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
-        android:text="Update"
+        android:text="Update Personal Details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTestDate" />
+
+    <TextView
+        android:id="@+id/contactnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Number"
+        android:textAppearance="@style/SmallText"
+        app:layout_constraintBottom_toBottomOf="@+id/profileContactNumber"
+        app:layout_constraintStart_toStartOf="@+id/idno"
+        app:layout_constraintTop_toTopOf="@+id/profileContactNumber" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textAppearance="@style/SmallText"
+        app:layout_constraintBottom_toBottomOf="@+id/addressTextView"
+        app:layout_constraintStart_toStartOf="@+id/contactnumber"
+        app:layout_constraintTop_toTopOf="@+id/addressTextView" />
+
+    <TextView
+        android:id="@+id/profileContactNumber"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="+81 11-222-6655"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/GreyBody"
+        app:layout_constraintBottom_toTopOf="@+id/addressTextView"
+        app:layout_constraintEnd_toEndOf="@+id/addressTextView"
+        app:layout_constraintTop_toBottomOf="@+id/profileID" />
+
+    <TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="〒060-0003 北海道札幌市中央区北３条西４丁目1-1 日本生命札幌ビル"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/GreyBody"
+        app:layout_constraintBottom_toTopOf="@+id/profileVaccineName"
+        app:layout_constraintEnd_toEndOf="@+id/profileVaccineName"
+        app:layout_constraintTop_toBottomOf="@+id/profileContactNumber" />
 </androidx.constraintlayout.widget.ConstraintLayout>
