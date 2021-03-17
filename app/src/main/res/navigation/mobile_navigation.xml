@@ -3,15 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/QRCodeFragment">
+    app:startDestination="@id/navigation_qr_code">
     <fragment
-        android:id="@+id/notificationsFragment"
-        android:name="com.example.covidgreenpass.ui.profile.NotificationsFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        android:id="@+id/navigation_profile"
+        android:name="com.example.covidgreenpass.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_editDetailsFragment"
+            app:destination="@id/editDetailsFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/QRCodeFragment"
+        android:id="@+id/navigation_qr_code"
         android:name="com.example.covidgreenpass.ui.QRCode.QRCodeFragment"
-        android:label="fragment_qrcode"
+        android:label="QR Code"
         tools:layout="@layout/fragment_qrcode" />
+    <fragment
+        android:id="@+id/editDetailsFragment"
+        android:name="com.example.covidgreenpass.EditDetailsFragment"
+        android:label="fragment_edit_details"
+        tools:layout="@layout/fragment_edit_details" />
 </navigation>
