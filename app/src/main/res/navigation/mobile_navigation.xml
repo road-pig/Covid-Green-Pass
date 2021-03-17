@@ -17,10 +17,27 @@
         android:id="@+id/navigation_qr_code"
         android:name="com.example.covidgreenpass.ui.QRCode.QRCodeFragment"
         android:label="QR Code"
-        tools:layout="@layout/fragment_qrcode" />
+        tools:layout="@layout/fragment_qrcode" >
+        <action
+            android:id="@+id/action_navigation_qr_code_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/editDetailsFragment"
         android:name="com.example.covidgreenpass.EditDetailsFragment"
-        android:label="fragment_edit_details"
-        tools:layout="@layout/fragment_edit_details" />
+        android:label="Update Profile"
+        tools:layout="@layout/fragment_edit_details" >
+        <action
+            android:id="@+id/action_editDetailsFragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.covidgreenpass.ui.login.LoginFragment"
+        android:label= "Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_navigation_qr_code"
+            app:destination="@id/navigation_qr_code" />
+    </fragment>
 </navigation>

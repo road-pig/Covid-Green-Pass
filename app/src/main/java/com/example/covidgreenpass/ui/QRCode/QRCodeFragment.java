@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,20 +17,19 @@ import com.example.covidgreenpass.R;
 
 public class QRCodeFragment extends Fragment {
 
-    private QRCodeViewModel QRCodeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        QRCodeViewModel =
-                new ViewModelProvider(this).get(QRCodeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_qrcode, container, false);
-//        final TextView textView = root.findViewById(R.id.text_dashboard);
-//        QRCodeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
         return root;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        ImageView qrCodeImage = view.findViewById(R.id.qrCodeImageView);
+
+    }
+
 }
