@@ -9,9 +9,9 @@ import io.michaelrocks.libphonenumber.android.PhoneNumberUtil;
 
 public class User {
     private String username, password, name, address, contactNo, contactEmail;
-    private Boolean vaccinated;
+    private boolean vaccinated, admin;
 
-    public User(String username, String password, String name, String address, String contactNo, String contactEmail, Boolean vaccinated) {
+    public User(String username, String password, String name, String address, String contactNo, String contactEmail, boolean vaccinated, boolean admin) {
         this.username = username;
         this.password = password;
         this.name = name;
@@ -19,6 +19,7 @@ public class User {
         this.contactNo = contactNo;
         this.contactEmail = contactEmail;
         this.vaccinated = vaccinated;
+        this.admin = admin;
     }
 
     public User(String username, String password, String name, String address, String contactNo, String contactEmail, MainActivity mainActivity) {
@@ -48,6 +49,6 @@ public class User {
     @NonNull
     @Override
     public String toString() {
-        return this.username + "," + this.password + "," + this.name + "," + this.address + "," + this.contactNo + "," + this.contactEmail + "," + this.vaccinated;
+        return this.username + "," + this.password + "," + this.name + "," + this.address + "," + this.contactNo + "," + this.contactEmail + "," + this.vaccinated + "," + this.admin;
     }
 }

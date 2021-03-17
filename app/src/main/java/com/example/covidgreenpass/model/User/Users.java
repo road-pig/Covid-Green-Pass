@@ -17,7 +17,7 @@ public class Users {
             Scanner scanner = new Scanner(file);
             while(scanner.hasNextLine()){
                 String[] info = scanner.nextLine().split(",");
-                users.add(new User(info[0], info[1], info[2], info[3], info[4], info[5], info[6] == "true"));
+                users.add(new User(info[0], info[1], info[2], info[3], info[4], info[5], info[6] == "true", info[7] == "true"));
             }
             scanner.close();
         } catch (FileNotFoundException e) {
