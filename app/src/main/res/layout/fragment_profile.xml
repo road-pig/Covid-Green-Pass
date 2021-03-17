@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.NotificationsFragment">
+    tools:context=".ui.profile.ProfileFragment">
 
     <TextView
         android:id="@+id/profileName"
@@ -24,7 +24,6 @@
         android:id="@+id/statusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:text="You Are Safe"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#4CAF50"
@@ -61,7 +60,7 @@
         android:id="@+id/idno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Identification Number:"
+        android:text="Identification No:"
         android:textAppearance="@style/SmallText"
         app:layout_constraintBottom_toBottomOf="@+id/profileID"
         app:layout_constraintStart_toStartOf="@+id/name"
@@ -187,7 +186,7 @@
         android:id="@+id/contactnumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contact Number"
+        android:text="Contact Number:"
         android:textAppearance="@style/SmallText"
         app:layout_constraintBottom_toBottomOf="@+id/profileContactNumber"
         app:layout_constraintStart_toStartOf="@+id/idno"
@@ -197,7 +196,7 @@
         android:id="@+id/address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Address"
+        android:text="Address:"
         android:textAppearance="@style/SmallText"
         app:layout_constraintBottom_toBottomOf="@+id/addressTextView"
         app:layout_constraintStart_toStartOf="@+id/contactnumber"
