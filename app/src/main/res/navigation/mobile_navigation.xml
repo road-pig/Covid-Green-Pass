@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/editDetailsFragment"
-        android:name="com.example.covidgreenpass.EditDetailsFragment"
+        android:name="com.example.covidgreenpass.ui.profile.EditDetailsFragment"
         android:label="Update Profile"
         tools:layout="@layout/fragment_edit_details" >
         <action

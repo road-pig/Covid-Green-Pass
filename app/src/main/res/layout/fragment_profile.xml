@@ -10,39 +10,15 @@
         android:id="@+id/profileName"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:gravity="right"
         android:text="Hatsune Miku"
         android:textAlignment="gravity"
         android:textAppearance="@style/GreyBody"
         app:layout_constraintBottom_toTopOf="@+id/profileID"
         app:layout_constraintEnd_toEndOf="@+id/profileID"
-        app:layout_constraintTop_toBottomOf="@+id/status2TextView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside" />
-
-    <TextView
-        android:id="@+id/statusTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="You Are Safe"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#4CAF50"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/status2TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="No contact with infected persons recorded"
-        android:textAppearance="@style/MediumText"
-        android:textColor="@color/dark_turquoise"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
 
     <TextView
         android:id="@+id/name"
