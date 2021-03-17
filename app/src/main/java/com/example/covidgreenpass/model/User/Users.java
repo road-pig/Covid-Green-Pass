@@ -35,7 +35,7 @@ public class Users {
         File file = new File(mainActivity.getFilesDir(), "Users.csv");
         try {
             PrintWriter printWriter = new PrintWriter(file);
-            printWriter.write(loggedInUser.toString());
+            printWriter.write(loggedInUser.toString() + ",true");
             for(int i = 0; i < users.size(); i++){
                 printWriter.write(users.get(i).toString());
             }

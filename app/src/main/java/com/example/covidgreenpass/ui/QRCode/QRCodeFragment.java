@@ -48,5 +48,4 @@ public class QRCodeFragment extends Fragment {
         }
         qrCodeImage.setImageURI(Uri.fromFile(image));
     }
-
 }
