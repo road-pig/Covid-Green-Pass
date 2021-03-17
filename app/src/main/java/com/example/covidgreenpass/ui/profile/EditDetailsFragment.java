@@ -35,7 +35,7 @@ public class EditDetailsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         EditText editTextPhone = view.findViewById(R.id.editTextPhone);
         EditText editTextAddress = view.findViewById(R.id.editTextTextPostalAddress);
-        EditText editTextPassword = view.findViewById(R.id.password);
+        EditText editTextPassword = view.findViewById(R.id.editTextPassword);
         EditText editTextConfirmPassword = view.findViewById(R.id.editTextConfirmPassword);
         TextView doesNotMatch = view.findViewById(R.id.editPasswordsMatch);
         Button editConfirm = view.findViewById(R.id.editConfirm);

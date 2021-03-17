@@ -1,5 +1,7 @@
 package com.example.covidgreenpass.model.QRCode;
 
+import android.graphics.Bitmap;
+
 import com.example.covidgreenpass.MainActivity;
 import com.example.covidgreenpass.model.User.User;
 
@@ -13,12 +15,13 @@ public class eQRCode extends QRCode {
         this.user = user;
     }
 
-    public void generate(MainActivity mainActivity){
+    public Bitmap generate(MainActivity mainActivity){
         try {
-            generateQRCodeImage(toString(), Paths.get("./").toAbsolutePath().relativize(Paths.get(mainActivity.getFilesDir().getAbsolutePath())) + "/" + "current" + ".png");
+            return generateQRCodeImage(toString(), Paths.get("./").toAbsolutePath().relativize(Paths.get(mainActivity.getFilesDir().getAbsolutePath())) + "/" + "current" + ".png");
         } catch (Exception e) {
             System.out.println(e.getStackTrace());
         }
+        return null;
     }
 
     @Override

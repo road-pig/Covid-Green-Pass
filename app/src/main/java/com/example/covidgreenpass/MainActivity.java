@@ -2,6 +2,7 @@ package com.example.covidgreenpass;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.covidgreenpass.model.User.Users;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -33,8 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
         if(!Users.loggedIn){
             navController.navigate(R.id.action_navigation_qr_code_to_loginFragment);
+            findViewById(R.id.nav_view).setVisibility(View.GONE);
         }
 
+    }
+
+    public void showNavBar(){
+        findViewById(R.id.nav_view).setVisibility(View.VISIBLE);
     }
 
 }

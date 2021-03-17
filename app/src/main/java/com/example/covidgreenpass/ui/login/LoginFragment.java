@@ -22,6 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.covidgreenpass.MainActivity;
 import com.example.covidgreenpass.R;
 import com.example.covidgreenpass.model.User.Users;
 
@@ -47,11 +48,15 @@ public class LoginFragment extends Fragment {
         final ProgressBar loadingProgressBar = view.findViewById(R.id.loading);
         final TextView incorrectTextView = view.findViewById(R.id.loginIncorrect);
 
+        loginButton.setActivated(true);
+
        loginButton.setOnClickListener(view1 -> {
            String username = usernameEditText.getText().toString();
            String password = passwordEditText.getText().toString();
 
            if(Users.login(username, password)){
+               ((MainActivity) getActivity()).showNavBar();
+               Users.writeUsers((MainActivity) getActivity());
                NavHostFragment.findNavController(this).navigate(R.id.action_loginFragment_to_navigation_qr_code);
            }else{
                 incorrectTextView.setVisibility(View.VISIBLE);

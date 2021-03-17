@@ -44,8 +44,8 @@ public class QRCodeFragment extends Fragment {
         File image = new File(filename);
         if (!image.exists()) {
             eQRCode qrCode = new eQRCode(300, 300, Users.loggedInUser);
-            qrCode.generate((MainActivity) getActivity());
+            qrCodeImage.setImageBitmap(qrCode.generate((MainActivity) getActivity()));
         }
-        qrCodeImage.setImageURI(Uri.fromFile(image));
+//        qrCodeImage.setImageURI(Uri.fromFile(image));
     }
 }

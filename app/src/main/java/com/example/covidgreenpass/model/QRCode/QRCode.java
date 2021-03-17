@@ -1,10 +1,14 @@
 package com.example.covidgreenpass.model.QRCode;
 
+
+
+import android.graphics.Bitmap;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
-import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
+import com.journeyapps.barcodescanner.BarcodeEncoder;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;
@@ -19,12 +23,12 @@ public abstract class QRCode {
         this.height = height;
     }
 
-    protected void generateQRCodeImage(String text, String filename) throws WriterException, IOException{
-        QRCodeWriter qrCodeWriter = new QRCodeWriter();
-        BitMatrix bitMatrix = qrCodeWriter.encode(text, BarcodeFormat.QR_CODE, width, height);
+    protected Bitmap generateQRCodeImage(String text, String filename) throws WriterException, IOException{
+        BarcodeEncoder qrCodeWriter = new BarcodeEncoder();
+        Bitmap bitmap = qrCodeWriter.encodeBitmap(text, BarcodeFormat.QR_CODE, width, height);
 
         Path path = FileSystems.getDefault().getPath("./" + filename);
-        MatrixToImageWriter.writeToPath(bitMatrix, "PNG", path);
+        return bitmap;
     }
 
 }
