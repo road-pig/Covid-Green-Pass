@@ -119,6 +119,7 @@
         android:layout_marginTop="4dp"
         android:text="Passwords Do Not Match"
         android:textColor="#E91E63"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/editTextConfirmPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextConfirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPassword" />

@@ -40,4 +40,3 @@ public class MainActivity extends AppCompatActivity {
 }
 
 
-//todo login thing, bottom nav, collapsing toolbar, edit details, integrate everything

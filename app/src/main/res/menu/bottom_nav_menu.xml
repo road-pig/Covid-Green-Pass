@@ -3,13 +3,13 @@
 
     <item
         android:id="@+id/navigation_qr_code"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/ic_qr_code_foreground"
         android:enabled="true"
         android:title="QR Code" />
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:icon="@drawable/ic_profile_foreground"
         android:enabled="true"
         android:title="Profile" />
 
