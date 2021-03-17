@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class Users {
     public static ArrayList<User> users = new ArrayList<>();
+    public static User loggedInUser;
     public static void readUsers(MainActivity mainActivity){
         File file = new File(mainActivity.getFilesDir(), "Users.csv");
         try {
@@ -35,6 +36,9 @@ public class Users {
             createFile(mainActivity);
             writeUsers(mainActivity);
         }
+    }
+    public static boolean login(String username, String password){
+
     }
     private static void createFile(MainActivity mainActivity){
         try {
